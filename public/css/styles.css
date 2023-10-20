@@ -1,0 +1,45 @@
+:root{
+    --color-amarillo: #EAC926;
+    --color-azul: #03264C;
+    --color-celeste: #1259C3;
+    --color-gris-oscuro: #666;
+    --color-gris-claro: #EBEBEB;
+    --color-verde: #39B54A;
+}
+
+body{
+    background-color: var(--color-amarillo);
+    font-family: 'Roboto';
+    font-size: 12px;
+}
+
+.burger-menu{
+    text-align: center ;
+    font-size: 28px;
+}
+
+h2{
+    font-size: 24px;
+}
+
+.price{
+    font-size: 18px;
+}
+
+.discount{
+    font-size: 16px;
+}
+
+.product-name{
+    font-size: 16px;
+}
+
+.fa-solid{
+    font-size: 2em;
+    /* Esto me modifica el tamaño tambien de los iconos del principio, ver como solucionar */
+}
+
+.icon-container{
+    margin-bottom: 10px;
+}
+
