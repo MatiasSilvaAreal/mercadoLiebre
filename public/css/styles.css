@@ -13,6 +13,7 @@
     --color-verde: #39B54A;
 }
 
+/* todo el header */
 .main-header {
     background-color: var(--color-amarillo);
     padding: 20px;
@@ -28,6 +29,7 @@
     padding: 0;
 }
 
+/* "compra en cuotas" */
 .copy-header {
     font-weight: 400;
     text-align: center;
@@ -37,7 +39,6 @@ body {
     background-color: var(--color-gris-claro);
     font-family: 'Roboto';
     font-size: 12px;
-    position: relative;
 }
 
 .burger-menu {
@@ -53,6 +54,7 @@ body {
     margin-top: 10%;
 }
 
+/* 2da barra del header. desde ofertas hasta mis compras */
 .main-navbar {
     display: none;
 }
@@ -71,13 +73,24 @@ body {
     font-size: 14px;
 }
 
+.price-discount {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
 .price {
     font-size: 18px;
+    flex: 0.3;
+    margin-right: 5px;
 }
 
 .discount {
     font-size: 16px;
     color: var(--color-amarillo);
+    flex: 0.7;
 }
 
 .product-name {
@@ -97,10 +110,11 @@ body {
     justify-content: center;
 }
 
-/* .all-products{
+.all-products {
     display: flex;
     flex-wrap: wrap;
-} */
+    justify-content: center;
+}
 
 .product {
     background-color: white;
@@ -109,9 +123,29 @@ body {
     margin: 10px;
 }
 
+h2 {
+    margin: 10px;
+    color: var(--color-gris-oscuro)
+}
+
 .caja-descrip {
     border-top: 1px solid #ebebeb;
     padding: 15px;
+    position: relative;
+}
+
+.caja-descrip>.delivery-icon {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
 }
 
 .img-main {
@@ -131,16 +165,25 @@ body {
     .product-name {
         display: block;
     }
+
     .product {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
     .top-bar {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .fa-magnifying-glass {
+        border: solid var(--color-gris-oscuro) 1px;
+        font-size: 11px;
+        margin-left: 2px;
+        background-color: var(--color-gris-claro);
+        padding: 2px;
     }
 
     .copy-header {
@@ -155,6 +198,7 @@ body {
     .main-navbar {
         display: flex;
         justify-content: space-between;
+        margin-top: 0.5rem;
     }
 
     .main-navbar ul {
