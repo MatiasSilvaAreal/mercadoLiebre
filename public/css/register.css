@@ -4,3 +4,57 @@
     margin: 0;
 }
 
+.register-form {
+    padding: 20px 15px;
+}
+
+.control-del-formulario {
+    margin-bottom: 15px;
+}
+
+.control-del-formulario label {
+    margin-bottom: 5px;
+    font-style: italic;
+    display: block;
+    font-size: 15px;
+}
+
+.control {
+    width: 80%;
+    padding: 6px;
+}
+
+.button-form {
+    background-color: var(--color-verde);
+    border: none;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px ;
+}
+
+
+/* .perfil {
+    display: flex;
+} */
+
+.perfil-cat {
+    margin: 5px;
+}
+
+.cats {
+   display: flex;
+   flex-direction: column;
+}
+
+.cat {
+    margin: 10px 0;
+} 
+
+
+@media (min-width: 1200px) {
+    .control {
+        width: 20%;
+        padding: 8px;
+    }
+}

@@ -17,11 +17,13 @@
 <body>
     <header class="main-header">
         <div class="top-bar">
-            <img src="/images/logo-mercado-liebre.svg" class="logo">
-
-            <p class="">
-                <input type="search" placeholder="buscar..."><i class="fa-solid fa-magnifying-glass"></i>
-            </p>
+            <a href="/"><img src="/images/logo-mercado-liebre.svg" class="logo"></a>
+            
+                <form action="" method="get" class="search-bar">
+                    <label for="search"></label>
+                    <input type="search" placeholder="Buscar producto..." id="search">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>           
 
             <h3 class="copy-header">
                 <i class="fa-solid fa-hand-holding-dollar icon-header"></i>
@@ -42,8 +44,8 @@
             </ul>
 
             <ul class="right-navbar">
-                <li><a href="#">Creá tu cuenta</a> <i class="fa-regular fa-id-card icon-header"></i> </li>
-                <li><a href="#">Ingresá</a> <i class="fa-solid fa-right-to-bracket icon-header"></i> </li>
+                <li><a href="/register">Creá tu cuenta</a> <i class="fa-regular fa-id-card icon-header"></i> </li>
+                <li><a href="/login">Ingresá</a> <i class="fa-solid fa-right-to-bracket icon-header"></i> </li>
                 <li><a href="#">Mis compras</a> <i class="fa-solid fa-basket-shopping icon-header"></i> </li>
             </ul>
         </nav>
@@ -53,36 +55,57 @@
     <main>
         <form action="/crear-producto" method="POST" class="create-form">
             <div class="control-del-formulario">
-                <label>Nombre del producto:</label>
-                <input type="text" name="Nombre" class="control">
+                <label for="product-name">Nombre del producto:</label>
+                <input type="text" name="Nombre" class="control" id="product-name" placeholder="Producto">
             </div>
             <div class="control-del-formulario">
-                <label>Precio:</label>
-                <input type="text" name="Precio" class="control">
+                <label for="price">Precio:</label>
+                <input type="text" name="Precio" class="control" id="price" placeholder="Precio">
             </div>
             <div class="control-del-formulario">
-                <label>Categoria:</label>
-                <select name="categoria" class="control">
+                <label for="cat">Categoria:</label>
+                <select name="categoria" class="control" id="cat">
                     <option value="hogar">Hogar</option>
                     <option value="electro">Electro</option>
                     <option value="indumentaria">Indumentaria</option>
                 </select>
             </div>
             <div class="control-del-formulario">
-                <label>Ciudad:</label>
-                <select name="ciudad" class="control">
+                <label for="city">Provincia:</label>
+                <select name="ciudad" class="control" id="city">
                     <option value="baires">Buenos Aires</option>
-                    <option value="rosario">Rosario</option>
-                    <option value="mdza">Mendoza</option>
+                    <option value="caba">Ciudad Autonoma de Buenos Aires</option>
+                    <option value="catamarca">Catamarca</option>
+                    <option value="chaco">Chaco</option>
+                    <option value="chubur">Chubut</option>
+                    <option value="cordoba">Cordoba</option>
+                    <option value="corrientes">Corrientes</option>
+                    <option value="entre-rios">Entre Ríos</option>
+                    <option value="formosa">Formosa</option>
+                    <option value="jujuy">Jujuy</option>
+                    <option value="pampa">La Pampa</option>
+                    <option value="rioja">La Rioja</option>
+                    <option value="mendoza">Mendoza</option>
+                    <option value="misiones">Misiones</option>
+                    <option value="neuquen">Neuquén</option>
+                    <option value="rio-negro">Rio Negro</option>
+                    <option value="salta">Salta</option>
+                    <option value="san-juan">San Juan</option>
+                    <option value="san-luis">San Luis</option>
+                    <option value="santa-cruz">Santa Cruz</option>
+                    <option value="santa-fe">Santa Fe</option>
+                    <option value="sgo-estero">Santiago del Estero</option>
+                    <option value="tierra-fuego">Tierra del Fuego, Antártida e Islas del Atlántico Sur</option>
+                    <option value="tucuman">Tucumán</option>
                 </select>
             </div>
             <div class="control-del-formulario">
-                <label>Descripción:</label>
-                <textarea name="descripcion" class="control"></textarea>
+                <label for="description">Descripción:</label>
+                <textarea name="descripcion" class="control" id="description" placeholder="Describa el producto"></textarea>
             </div>
             <div class="control-del-formulario">
-                <label>Está en oferta:</label>
-                <input type="radio" name="Oferta">
+                <label for="offer">Está en oferta:</label>
+                <input type="radio" name="Oferta" id="offer">
             </div>
             <button type="reset" class="button-form">Borrar</button>
             <button type="submit" class="button-form">Guardar</button>

@@ -23,6 +23,27 @@
     width: 100px;
 }
 
+.search-bar {
+    display: flex; /* Usamos flexbox para alinear los elementos horizontalmente */
+    width: 300px; /* Ancho personalizado para el formulario */
+}
+
+.search-bar label {
+    display: none; /* Ocultar la etiqueta, ya que no tiene contenido visible */
+}
+
+.search-bar input[type="search"] {
+    flex: 1; /* El campo de búsqueda se expandirá para ocupar el espacio disponible */
+    padding: 10px; /* Añadir espacio alrededor del campo de búsqueda */
+}
+
+.search-bar button {
+    background-color: var(--color-celeste); /* Cambiar el color de fondo del botón */
+    color: #fff; /* Cambiar el color del texto del botón */
+    border: none;
+    padding: 10px; /* Añadir espacio alrededor del botón */
+}
+
 .banner {
     width: 100%;
     margin-bottom: 0;
@@ -182,13 +203,13 @@ a:hover {
         align-items: center;
     }
 
-    .fa-magnifying-glass {
+    /* .fa-magnifying-glass {
         border: solid var(--color-gris-oscuro) 1px;
         font-size: 11px;
         margin-left: 2px;
         background-color: var(--color-gris-claro);
         padding: 2px;
-    }
+    } */
 
     .copy-header {
         max-width: 150px;
