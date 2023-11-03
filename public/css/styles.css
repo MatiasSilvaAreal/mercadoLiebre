@@ -19,13 +19,21 @@
     padding: 20px;
 }
 
+.encabezado {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo {
     width: 100px;
 }
 
 .search-bar {
     display: flex;
-    width: 300px;
+    width: 20rem;
+    height: 2.5rem;
 }
 
 .search-bar input[type="search"] {
