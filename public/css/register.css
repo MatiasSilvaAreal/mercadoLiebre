@@ -17,6 +17,7 @@
     font-style: italic;
     display: block;
     font-size: 15px;
+    text-decoration: underline;
 }
 
 .control {
@@ -30,27 +31,41 @@
     font-size: 20px;
     color: #ffffff;
     padding: 5px 10px;
-    border-radius: 5px ;
+    border-radius: 5px;
 }
 
 
-/* .perfil {
+.perfil {
     display: flex;
-} */
-
-.perfil-cat {
-    margin: 5px;
+    justify-content: center;
 }
 
-.cats {
+.perfil label {
+    font-size: 13px;
+    margin: 0.4rem;
+    font-style: normal;
+    text-decoration: none;
+}
+
+
+.all-cats {
    display: flex;
    flex-direction: column;
 }
 
 .cat {
     margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
 } 
 
+.cat label {
+    font-size: 13px;
+    margin: 0.4rem;
+    font-style: normal;
+    text-decoration: none;
+}
 
 @media (min-width: 1200px) {
     .control {

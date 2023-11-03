@@ -5,7 +5,6 @@
 }
 
 .login-form {
-    border: solid red 2px;
     padding: 20px 15px;
 }
 
@@ -31,7 +30,12 @@
     font-size: 20px;
     color: #ffffff;
     padding: 5px 10px;
-    border-radius: 5px ;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+}
+
+.button-form:hover{
+    background-color: #0022AA;
 }
 
 .cats {
@@ -42,8 +46,12 @@
 .cat {
     margin: 4px;
 }
- 
 
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 
 @media (min-width: 1200px) {
     .control {

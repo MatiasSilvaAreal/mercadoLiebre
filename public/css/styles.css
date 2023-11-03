@@ -24,24 +24,21 @@
 }
 
 .search-bar {
-    display: flex; /* Usamos flexbox para alinear los elementos horizontalmente */
-    width: 300px; /* Ancho personalizado para el formulario */
-}
-
-.search-bar label {
-    display: none; /* Ocultar la etiqueta, ya que no tiene contenido visible */
+    display: flex;
+    width: 300px;
 }
 
 .search-bar input[type="search"] {
-    flex: 1; /* El campo de búsqueda se expandirá para ocupar el espacio disponible */
-    padding: 10px; /* Añadir espacio alrededor del campo de búsqueda */
+    flex: 1;
+    /* El campo de búsqueda se expandirá para ocupar el espacio disponible */
+    padding: 10px;
 }
 
 .search-bar button {
-    background-color: var(--color-celeste); /* Cambiar el color de fondo del botón */
-    color: #fff; /* Cambiar el color del texto del botón */
+    background-color: var(--color-celeste);
+    color: #fff;
     border: none;
-    padding: 10px; /* Añadir espacio alrededor del botón */
+    padding: 10px;
 }
 
 .banner {
@@ -94,6 +91,7 @@ body {
     font-size: 14px;
 }
 
+/* Aqui comienza el main */
 .price-discount {
     display: flex;
     width: 100%;
@@ -110,7 +108,7 @@ body {
 
 .discount {
     font-size: 16px;
-    color: var(--color-amarillo);
+    color: rgb(94, 198, 104);
     flex: 0.7;
 }
 
@@ -119,7 +117,9 @@ body {
     margin-top: 5%;
     color: var(--color-gris-oscuro);
     display: none;
+    transition: display 0.5s;
 }
+
 
 .icon-header {
     font-size: 1.5em;
@@ -134,14 +134,15 @@ body {
 .all-products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .product {
     background-color: white;
     width: 18rem;
-    height: 23rem;
+    height: 19.5rem;
     margin: 10px;
+    transition: box-shadow;
 }
 
 h2 {
@@ -155,17 +156,19 @@ a:hover {
 
 .caja-descrip {
     border-top: 1px solid #ebebeb;
-    padding: 15px;
+    padding: 13px;
     position: relative;
 }
 
 .caja-descrip>.delivery-icon {
+    /*coloca el camioncito sobre la linea*/
     display: block;
     font-size: 16px;
     padding: 5px;
     width: 30px;
     height: 30px;
     border: 1px solid #39b54a;
+    color: #39b54a;
     background-color: #FFF;
     border-radius: 50%;
     position: absolute;
@@ -177,6 +180,7 @@ a:hover {
     width: 90%;
 }
 
+/* Aqui comienza el footer */
 .icon-footer {
     font-size: 2em;
 }
@@ -185,31 +189,23 @@ a:hover {
     margin-bottom: 10px;
 }
 
+footer {
+    background-color: #fff;
+}
+
 @media (min-width: 361px) {
+    /* Vacio */
 
-    .product-name {
-        display: block;
-    }
-
-    .product {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
 }
 
 @media (min-width: 700px) {
+
+    /* Tablets */
     .top-bar {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-
-    /* .fa-magnifying-glass {
-        border: solid var(--color-gris-oscuro) 1px;
-        font-size: 11px;
-        margin-left: 2px;
-        background-color: var(--color-gris-claro);
-        padding: 2px;
-    } */
 
     .copy-header {
         max-width: 150px;
@@ -236,6 +232,7 @@ a:hover {
 }
 
 @media (min-width: 1200px) {
+    /* pc */
 
     .top-bar,
     .main-navbar {
@@ -267,5 +264,72 @@ a:hover {
 
     .main-navbar a {
         font-size: 18px;
+    }
+
+    .product {
+        max-width: 15rem;
+        max-height: 18rem;
+        cursor: pointer;
+    }
+
+    .caja-descrip>.delivery-icon {
+        transition: transform 0.4s;
+    }
+
+    .product:hover .delivery-icon {
+        /* Gira 90º al camioncito */
+        transform: rotate(-90deg);
+    }
+
+    .product:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .product:hover .product-name {
+        display: block;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: flex-start;
+        margin: 1rem;
+        padding-top: 2rem;
+    }
+
+    .footer-box {
+        height: 8rem;
+        margin: 1.5rem;
+        justify-items: center;
+    }
+
+    .footer-box h3 {
+        color: var(--color-gris-oscuro);
+    }
+
+    .footer-box p {
+        color: rgb(92, 91, 91);
+    }
+
+    .icon-footer {
+        color: #146aea;
+        transition: color 0.1s, font-size 0.1s;
+    }
+
+    .icon-footer:hover {
+        color: var(--color-celeste);
+        font-size: 2rem;
+    }
+
+    .copyright {
+        color: rgb(92, 91, 91);
+        padding-bottom: 1rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .product {
+        height: 21rem;
+        max-width: 18rem;
+        max-height: 22rem;
     }
 }
