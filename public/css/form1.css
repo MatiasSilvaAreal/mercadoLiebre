@@ -9,6 +9,10 @@
     top: 0;
 }
 
+.copy-header {
+    text-align: left;
+}
+
 .create-form {
     padding: 20px 15px;
     margin-top: 240px;
@@ -42,5 +46,26 @@
     .control {
         width: 20%;
         padding: 8px;
+    }
+
+    .main-header {
+        position: static;
+    }
+
+    .create-form {
+        padding: 20px 15px;
+        margin-top: 0;
+    }
+
+    * {
+        text-align: center;
+    }
+
+    .control-del-formulario input[type="text"]{
+        text-align: left;
+    }
+
+    .control-del-formulario textarea {
+        text-align: left;
     }
 }
