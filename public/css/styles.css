@@ -100,6 +100,12 @@ body {
 }
 
 /* Aqui comienza el main */
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
 .price-discount {
     display: flex;
     width: 100%;
@@ -133,12 +139,6 @@ body {
     font-size: 1.5em;
 }
 
-.main-sinBanner {
-    width: 90%;
-    margin: auto;
-    justify-content: center;
-}
-
 .all-products {
     display: flex;
     flex-wrap: wrap;
@@ -155,7 +155,9 @@ body {
 
 h2 {
     margin: 10px;
-    color: var(--color-gris-oscuro)
+    color: var(--color-gris-oscuro);
+    font-size: 24px;
+    
 }
 
 a:hover {
@@ -164,7 +166,7 @@ a:hover {
 
 .caja-descrip {
     border-top: 1px solid #ebebeb;
-    padding: 13px;
+    padding: 15px;
     position: relative;
 }
 
@@ -201,12 +203,27 @@ footer {
     background-color: #fff;
 }
 
-@media (min-width: 361px) {
-    /* Vacio */
-
+.footer-box {
+    text-align: center;
 }
 
-@media (min-width: 700px) {
+.copyright {
+    padding: 1rem;
+}
+
+.icon-footer {
+    color: #146aea;
+}
+
+.footer-box h3 {
+    color: var(--color-gris-oscuro);
+}
+
+.footer-box p {
+    color: rgb(92, 91, 91);
+}
+
+@media (min-width: 760px) {
 
     /* Tablets */
     .top-bar {
@@ -239,7 +256,7 @@ footer {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     /* pc */
 
     .top-bar,
@@ -310,16 +327,7 @@ footer {
         justify-items: center;
     }
 
-    .footer-box h3 {
-        color: var(--color-gris-oscuro);
-    }
-
-    .footer-box p {
-        color: rgb(92, 91, 91);
-    }
-
     .icon-footer {
-        color: #146aea;
         transition: color 0.1s, font-size 0.1s;
     }
 
